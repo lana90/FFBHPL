@@ -91,7 +91,7 @@ namespace Fantasy.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public ActionResult Register(admin model)
+        public ActionResult Register(user model)
         {
            
             if (ModelState.IsValid)
@@ -101,7 +101,7 @@ namespace Fantasy.Controllers
                  string jsonString;
 
           
-                  DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(admin));
+                  DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(user));
                   MemoryStream ms = new MemoryStream();
                   ser.WriteObject(ms, model);
                   jsonString = Encoding.UTF8.GetString(ms.ToArray());

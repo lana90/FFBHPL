@@ -6,7 +6,6 @@ using System.ServiceModel;
 using System.Text;
 using System.Web;
 using System.Web.Security;
-using Newtonsoft.Json;
 using System.Web.Script.Serialization;
 using System.Runtime.Serialization.Json;
 using System.IO;
@@ -15,7 +14,7 @@ using System.Data.Entity.Validation;
 namespace FantasyServices
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "AdminService" in both code and config file together.
-    public class AdminService : IAdminService
+    public class UserService : IUserService
     {
         
 
@@ -26,7 +25,7 @@ namespace FantasyServices
 
             using (db)
             {
-                if (db.admin.Where(a => a.email.Equals(user) && a.password.Equals(password)).FirstOrDefault() != null)
+                if (db.user.Where(a => a.email.Equals(user) && a.password.Equals(password)).FirstOrDefault() != null)
                 {
                     return true;
                 }
@@ -38,7 +37,7 @@ namespace FantasyServices
         }
 
 
-        public bool CreateAdmin(string obj)
+        public bool CreateUser(string obj)
         {
             string provjera="";
             
@@ -46,9 +45,9 @@ namespace FantasyServices
             {
                 fantasyEntities db = new fantasyEntities();
 
-                DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(admin));
+                DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(user));
                 MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(obj));
-                admin a = db.admin.Add((admin)ser.ReadObject(ms));
+                user a = db.user.Add((user)ser.ReadObject(ms));
                 db.SaveChanges();
             }
             catch (DbEntityValidationException e)
@@ -73,7 +72,7 @@ namespace FantasyServices
 
 
 
-        public bool UpdateAdmin(string obj, string user)
+        public bool UpdateUser(string obj, string user)
         {
             string provjera = "";
 
@@ -81,11 +80,11 @@ namespace FantasyServices
             {
                 fantasyEntities db = new fantasyEntities();
 
-                DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(admin));
+                DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(user));
                 MemoryStream ms = new MemoryStream(Encoding.UTF8.GetBytes(obj));
-                admin a = db.admin.Where(k => k.email == user).FirstOrDefault();
+                user a = db.user.Where(k => k.email == user).FirstOrDefault();
                 if (a == null) provjera = "nema";
-                a = (admin)ser.ReadObject(ms);
+                a = (user)ser.ReadObject(ms);
                 
                 db.SaveChanges();
             }
@@ -106,7 +105,7 @@ namespace FantasyServices
             else return false;
         }
 
-        public bool DeleteAdmin(string user)
+        public bool DeleteUser(string user)
         {
             string provjera = "";
             try
@@ -115,12 +114,12 @@ namespace FantasyServices
 
                
                 
-                admin a = db.admin.Where(k => k.email == user).FirstOrDefault();
+                user a = db.user.Where(k => k.email == user).FirstOrDefault();
                 if (a == null) provjera = "nema";
                 else
                 {
-                    db.admin.Attach(a);
-                    db.admin.Remove(a);
+                    db.user.Attach(a);
+                    db.user.Remove(a);
 
                     db.SaveChanges();
                 }
@@ -143,19 +142,19 @@ namespace FantasyServices
 
         }
 
-        public string ReadAdmin(string email)
+        public string ReadUser(string email)
         {
             string provjera = "";
             string jsonString="";
             try
             {
-            
+
                 fantasyEntities db = new fantasyEntities();
-                var context = db.admin.Where(a => a.email == email).FirstOrDefault();
+                var context = db.user.Where(a => a.email == email).FirstOrDefault();
                 if (context == null) provjera = "nema";
                 else
                 {
-                    DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(admin));
+                    DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(user));
                     MemoryStream ms = new MemoryStream();
                     ser.WriteObject(ms, context);
                     jsonString = Encoding.UTF8.GetString(ms.ToArray());
@@ -178,7 +177,7 @@ namespace FantasyServices
             return jsonString;
         }
 
-        public List<string> ReadAllAdmins()
+        public List<string> ReadAllUsers()
         {
             string provjera = "";
             List<string> jsonString = new List<string>();
@@ -186,13 +185,13 @@ namespace FantasyServices
             {
 
                 fantasyEntities db = new fantasyEntities();
-                var context = db.admin.ToList();
+                var context = db.user.ToList();
                 if (context == null) provjera = "nema";
                 else
                 {
-                    foreach (admin a in context)
+                    foreach (user a in context)
                     {
-                        DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(admin));
+                        DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(user));
                         MemoryStream ms = new MemoryStream();
                         ser.WriteObject(ms, a);
                         jsonString.Add(Encoding.UTF8.GetString(ms.ToArray()));

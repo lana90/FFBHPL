@@ -135,7 +135,7 @@ namespace FantasyServices
                 if (context == null) provjera = "nema";
                 else
                 {
-                    DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(admin));
+                    DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(user));
                     MemoryStream ms = new MemoryStream();
                     ser.WriteObject(ms, context);
                     jsonString = Encoding.UTF8.GetString(ms.ToArray());

@@ -21,6 +21,7 @@ namespace Fantasy.Models
     
         public int idEvents { get; set; }
         public string eventName { get; set; }
+        public int points { get; set; }
     
         public virtual ICollection<matchevents> matchevents { get; set; }
     }

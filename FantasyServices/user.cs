@@ -18,6 +18,7 @@ namespace FantasyServices
         {
             this.league = new HashSet<league>();
             this.leagueparticipants = new HashSet<leagueparticipants>();
+            this.squad = new HashSet<squad>();
         }
     
         public int userId { get; set; }
@@ -29,17 +30,13 @@ namespace FantasyServices
         public string email { get; set; }
         public string password { get; set; }
         public string country { get; set; }
-        public string region { get; set; }
         public string closestCity { get; set; }
-        public string timeZone { get; set; }
-        public string zipCode { get; set; }
-        public int idPlayersTeam1 { get; set; }
         public int UserGroup_idUserGroup { get; set; }
-        public byte[] image { get; set; }
+        public string image { get; set; }
     
         public virtual ICollection<league> league { get; set; }
         public virtual ICollection<leagueparticipants> leagueparticipants { get; set; }
-        public virtual playersteam playersteam { get; set; }
+        public virtual ICollection<squad> squad { get; set; }
         public virtual usergroup usergroup { get; set; }
     }
 }

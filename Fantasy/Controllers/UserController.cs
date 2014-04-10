@@ -9,7 +9,7 @@ using Fantasy.Models;
 
 namespace Fantasy.Controllers
 {
-    public class AdminController : Controller
+    public class UserController : Controller
     {
         private fantasyEntities db = new fantasyEntities();
 
@@ -18,7 +18,7 @@ namespace Fantasy.Controllers
 
         public ActionResult Index()
         {
-            return View(db.admin.ToList());
+            return View(db.user.ToList());
         }
 
         //
@@ -26,7 +26,7 @@ namespace Fantasy.Controllers
 
         public ActionResult Details(int id = 0)
         {
-            admin admin = db.admin.Find(id);
+            user admin = db.user.Find(id);
             if (admin == null)
             {
                 return HttpNotFound();
@@ -46,11 +46,11 @@ namespace Fantasy.Controllers
         // POST: /Admin/Create
 
         [HttpPost]
-        public ActionResult Create(admin admin)
+        public ActionResult Create(user admin)
         {
             if (ModelState.IsValid)
             {
-                db.admin.Add(admin);
+                db.user.Add(admin);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -63,7 +63,7 @@ namespace Fantasy.Controllers
 
         public ActionResult Edit(int id = 0)
         {
-            admin admin = db.admin.Find(id);
+            user admin = db.user.Find(id);
             if (admin == null)
             {
                 return HttpNotFound();
@@ -75,7 +75,7 @@ namespace Fantasy.Controllers
         // POST: /Admin/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(admin admin)
+        public ActionResult Edit(user admin)
         {
             if (ModelState.IsValid)
             {
@@ -91,7 +91,7 @@ namespace Fantasy.Controllers
 
         public ActionResult Delete(int id = 0)
         {
-            admin admin = db.admin.Find(id);
+            user admin = db.user.Find(id);
             if (admin == null)
             {
                 return HttpNotFound();
@@ -105,8 +105,8 @@ namespace Fantasy.Controllers
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
-            admin admin = db.admin.Find(id);
-            db.admin.Remove(admin);
+            user admin = db.user.Find(id);
+            db.user.Remove(admin);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

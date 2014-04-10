@@ -22,7 +22,9 @@ namespace Fantasy.Models
         public int idSeason { get; set; }
         public string seasonName { get; set; }
         public string description { get; set; }
+        public int SquadStructure_idSquadStructure { get; set; }
     
         public virtual ICollection<gameweek> gameweek { get; set; }
+        public virtual squadstructure squadstructure { get; set; }
     }
 }

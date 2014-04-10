@@ -1,4 +1,4 @@
-﻿@model Fantasy.Models.admin
+﻿@model Fantasy.Models.user
 @{
     ViewBag.Title = "Register";
 }
@@ -16,29 +16,41 @@
         <legend>Registration Form</legend>
         <ol>
             <li>
-                @Html.LabelFor(m => m.email)
-                @Html.TextBoxFor(m => m.email)
-            </li>
-            <li>
-                @Html.LabelFor(m => m.password)
-                @Html.PasswordFor(m => m.password)
-            </li>
-            <li>
-                @Html.LabelFor(m=>m.firstName)
+                @Html.LabelFor(m => m.firstName)
                 @Html.TextBoxFor(m => m.firstName)
             </li>
             <li>
-                @Html.LabelFor(m=>m.lastName)
+                @Html.LabelFor(m => m.lastName)
                 @Html.TextBoxFor(m => m.lastName)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.dateOfBirth)
+                @Html.TextBoxFor(m => m.dateOfBirth)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.gender)
+                <select id="gender"><option>M</option><option>F</option></select>
+            </li>
+            <li>
+                @Html.LabelFor(m=>m.cellPhone)
+                @Html.TextBoxFor(m => m.cellPhone)
+            </li>
+            <li>
+                @Html.LabelFor(m=>m.email)
+                @Html.TextBoxFor(m => m.email)
            </li>
           
              <li>
-                @Html.LabelFor(m=>m.gender)
-                @Html.TextBoxFor(m => m.gender)
+                @Html.LabelFor(m=>m.password)
+                @Html.TextBoxFor(m => m.password)
+           </li>
+            <li>
+                @Html.LabelFor(m=>m.country)
+                @Html.TextBoxFor(m => m.country)
            </li>
                <li>
-                @Html.LabelFor(m=>m.location)
-                @Html.TextBoxFor(m => m.location)
+                @Html.LabelFor(m=>m.closestCity)
+                @Html.TextBoxFor(m => m.closestCity)
            </li>
             
         </ol>

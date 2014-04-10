@@ -1,24 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="fantasyModelStoreContainer" CdmEntityContainer="fantasyEntities">
-    <EntitySetMapping Name="admin">
-      <EntityTypeMapping TypeName="fantasyModel.admin">
-        <MappingFragment StoreEntitySet="admin">
-          <ScalarProperty Name="idadmin" ColumnName="idadmin" />
-          <ScalarProperty Name="firstName" ColumnName="firstName" />
-          <ScalarProperty Name="lastName" ColumnName="lastName" />
-          <ScalarProperty Name="email" ColumnName="email" />
-          <ScalarProperty Name="password" ColumnName="password" />
-          <ScalarProperty Name="gender" ColumnName="gender" />
-          <ScalarProperty Name="location" ColumnName="location" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="events">
       <EntityTypeMapping TypeName="fantasyModel.events">
         <MappingFragment StoreEntitySet="events">
           <ScalarProperty Name="idEvents" ColumnName="idEvents" />
           <ScalarProperty Name="eventName" ColumnName="eventName" />
+          <ScalarProperty Name="points" ColumnName="points" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -104,29 +92,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="playersteam">
-      <EntityTypeMapping TypeName="fantasyModel.playersteam">
-        <MappingFragment StoreEntitySet="playersteam">
-          <ScalarProperty Name="idPlayersTeam" ColumnName="idPlayersTeam" />
-          <ScalarProperty Name="playersTeamName" ColumnName="playersTeamName" />
-          <ScalarProperty Name="gkPosition1" ColumnName="gkPosition1" />
-          <ScalarProperty Name="gkPosition2" ColumnName="gkPosition2" />
-          <ScalarProperty Name="defPosition1" ColumnName="defPosition1" />
-          <ScalarProperty Name="defPosition2" ColumnName="defPosition2" />
-          <ScalarProperty Name="defPosition3" ColumnName="defPosition3" />
-          <ScalarProperty Name="defPosition4" ColumnName="defPosition4" />
-          <ScalarProperty Name="defPosition5" ColumnName="defPosition5" />
-          <ScalarProperty Name="midPosition1" ColumnName="midPosition1" />
-          <ScalarProperty Name="midPosition2" ColumnName="midPosition2" />
-          <ScalarProperty Name="midPosition3" ColumnName="midPosition3" />
-          <ScalarProperty Name="midPosition4" ColumnName="midPosition4" />
-          <ScalarProperty Name="midPosition5" ColumnName="midPosition5" />
-          <ScalarProperty Name="fwPosition1" ColumnName="fwPosition1" />
-          <ScalarProperty Name="fwPosition2" ColumnName="fwPosition2" />
-          <ScalarProperty Name="fwPosition3" ColumnName="fwPosition3" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="position">
       <EntityTypeMapping TypeName="fantasyModel.position">
         <MappingFragment StoreEntitySet="position">
@@ -142,29 +107,7 @@
           <ScalarProperty Name="idSeason" ColumnName="idSeason" />
           <ScalarProperty Name="seasonName" ColumnName="seasonName" />
           <ScalarProperty Name="description" ColumnName="description" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="selectedsquad">
-      <EntityTypeMapping TypeName="fantasyModel.selectedsquad">
-        <MappingFragment StoreEntitySet="selectedsquad">
-          <ScalarProperty Name="idSelectedSquad" ColumnName="idSelectedSquad" />
-          <ScalarProperty Name="idPlayersTeam2" ColumnName="idPlayersTeam2" />
-          <ScalarProperty Name="gk1In" ColumnName="gk1In" />
-          <ScalarProperty Name="gk2In" ColumnName="gk2In" />
-          <ScalarProperty Name="def1In" ColumnName="def1In" />
-          <ScalarProperty Name="def2In" ColumnName="def2In" />
-          <ScalarProperty Name="def3In" ColumnName="def3In" />
-          <ScalarProperty Name="def4In" ColumnName="def4In" />
-          <ScalarProperty Name="def5In" ColumnName="def5In" />
-          <ScalarProperty Name="mid1In" ColumnName="mid1In" />
-          <ScalarProperty Name="mid2In" ColumnName="mid2In" />
-          <ScalarProperty Name="mid3In" ColumnName="mid3In" />
-          <ScalarProperty Name="mid4In" ColumnName="mid4In" />
-          <ScalarProperty Name="mid5In" ColumnName="mid5In" />
-          <ScalarProperty Name="fw1In" ColumnName="fw1In" />
-          <ScalarProperty Name="fw2In" ColumnName="fw2In" />
-          <ScalarProperty Name="fw3In" ColumnName="fw3In" />
+          <ScalarProperty Name="SquadStructure_idSquadStructure" ColumnName="SquadStructure_idSquadStructure" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -172,17 +115,46 @@
       <EntityTypeMapping TypeName="fantasyModel.selectedsquadchecked">
         <MappingFragment StoreEntitySet="selectedsquadchecked">
           <ScalarProperty Name="idSelectedSquadChecked" ColumnName="idSelectedSquadChecked" />
-          <ScalarProperty Name="idSelectedSquad1" ColumnName="idSelectedSquad1" />
           <ScalarProperty Name="idGameWeek1" ColumnName="idGameWeek1" />
+          <ScalarProperty Name="Squad_idPlayersTeam" ColumnName="Squad_idPlayersTeam" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="transfer">
-      <EntityTypeMapping TypeName="fantasyModel.transfer">
-        <MappingFragment StoreEntitySet="transfer">
-          <ScalarProperty Name="idTransfer" ColumnName="idTransfer" />
-          <ScalarProperty Name="transferedPlayer" ColumnName="transferedPlayer" />
-          <ScalarProperty Name="transferedToTeam" ColumnName="transferedToTeam" />
+    <EntitySetMapping Name="squad">
+      <EntityTypeMapping TypeName="fantasyModel.squad">
+        <MappingFragment StoreEntitySet="squad">
+          <ScalarProperty Name="idPlayersTeam" ColumnName="idPlayersTeam" />
+          <ScalarProperty Name="playersTeamName" ColumnName="playersTeamName" />
+          <ScalarProperty Name="GK_owned" ColumnName="GK_owned" />
+          <ScalarProperty Name="MF_owned" ColumnName="MF_owned" />
+          <ScalarProperty Name="DEF_owned" ColumnName="DEF_owned" />
+          <ScalarProperty Name="FW_owned" ColumnName="FW_owned" />
+          <ScalarProperty Name="owner" ColumnName="owner" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="squadplayer">
+      <EntityTypeMapping TypeName="fantasyModel.squadplayer">
+        <MappingFragment StoreEntitySet="squadplayer">
+          <ScalarProperty Name="idSquadPlayer" ColumnName="idSquadPlayer" />
+          <ScalarProperty Name="PlayersTeamFK" ColumnName="PlayersTeamFK" />
+          <ScalarProperty Name="FootballPlayerFK" ColumnName="FootballPlayerFK" />
+          <ScalarProperty Name="priority" ColumnName="priority" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="squadstructure">
+      <EntityTypeMapping TypeName="fantasyModel.squadstructure">
+        <MappingFragment StoreEntitySet="squadstructure">
+          <ScalarProperty Name="idSquadStructure" ColumnName="idSquadStructure" />
+          <ScalarProperty Name="GK_min" ColumnName="GK_min" />
+          <ScalarProperty Name="GK_max" ColumnName="GK_max" />
+          <ScalarProperty Name="MF_min" ColumnName="MF_min" />
+          <ScalarProperty Name="MF_max" ColumnName="MF_max" />
+          <ScalarProperty Name="DEF_min" ColumnName="DEF_min" />
+          <ScalarProperty Name="DEF_max" ColumnName="DEF_max" />
+          <ScalarProperty Name="FW_min" ColumnName="FW_min" />
+          <ScalarProperty Name="FW_max" ColumnName="FW_max" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -198,11 +170,7 @@
           <ScalarProperty Name="email" ColumnName="email" />
           <ScalarProperty Name="password" ColumnName="password" />
           <ScalarProperty Name="country" ColumnName="country" />
-          <ScalarProperty Name="region" ColumnName="region" />
           <ScalarProperty Name="closestCity" ColumnName="closestCity" />
-          <ScalarProperty Name="timeZone" ColumnName="timeZone" />
-          <ScalarProperty Name="zipCode" ColumnName="zipCode" />
-          <ScalarProperty Name="idPlayersTeam1" ColumnName="idPlayersTeam1" />
           <ScalarProperty Name="UserGroup_idUserGroup" ColumnName="UserGroup_idUserGroup" />
           <ScalarProperty Name="image" ColumnName="image" />
         </MappingFragment>

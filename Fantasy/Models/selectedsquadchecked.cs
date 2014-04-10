@@ -15,10 +15,10 @@ namespace Fantasy.Models
     public partial class selectedsquadchecked
     {
         public int idSelectedSquadChecked { get; set; }
-        public int idSelectedSquad1 { get; set; }
         public int idGameWeek1 { get; set; }
+        public int Squad_idPlayersTeam { get; set; }
     
         public virtual gameweek gameweek { get; set; }
-        public virtual selectedsquad selectedsquad { get; set; }
+        public virtual squad squad { get; set; }
     }
 }

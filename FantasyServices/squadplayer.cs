@@ -12,14 +12,14 @@ namespace FantasyServices
     using System;
     using System.Collections.Generic;
     
-    public partial class admin
+    public partial class squadplayer
     {
-        public int idadmin { get; set; }
-        public string firstName { get; set; }
-        public string lastName { get; set; }
-        public string email { get; set; }
-        public string password { get; set; }
-        public sbyte gender { get; set; }
-        public string location { get; set; }
+        public int idSquadPlayer { get; set; }
+        public int PlayersTeamFK { get; set; }
+        public int FootballPlayerFK { get; set; }
+        public int priority { get; set; }
+    
+        public virtual footballplayer footballplayer { get; set; }
+        public virtual squad squad { get; set; }
     }
 }

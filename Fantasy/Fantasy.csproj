@@ -165,16 +165,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
-    <Compile Include="Models\admin.cs">
-      <DependentUpon>FantasyModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\events.cs">
       <DependentUpon>FantasyModel.tt</DependentUpon>
     </Compile>
@@ -217,22 +214,22 @@
     <Compile Include="Models\playernews.cs">
       <DependentUpon>FantasyModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\playersteam.cs">
-      <DependentUpon>FantasyModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\position.cs">
       <DependentUpon>FantasyModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\season.cs">
       <DependentUpon>FantasyModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\selectedsquad.cs">
-      <DependentUpon>FantasyModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\selectedsquadchecked.cs">
       <DependentUpon>FantasyModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\transfer.cs">
+    <Compile Include="Models\squad.cs">
+      <DependentUpon>FantasyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\squadplayer.cs">
+      <DependentUpon>FantasyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\squadstructure.cs">
       <DependentUpon>FantasyModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\user.cs">
@@ -382,11 +379,6 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Web.config" />
-    <Content Include="Views\Admin\Index.cshtml" />
-    <Content Include="Views\Admin\Details.cshtml" />
-    <Content Include="Views\Admin\Create.cshtml" />
-    <Content Include="Views\Admin\Edit.cshtml" />
-    <Content Include="Views\Admin\Delete.cshtml" />
     <Content Include="Views\Account\AfterLogin.cshtml" />
     <Content Include="Service References\MvcCall\service.wsdl" />
     <None Include="Service References\MvcCall\service.xsd">
@@ -395,6 +387,11 @@
     <None Include="Service References\MvcCall\service1.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\Details.cshtml" />
+    <Content Include="Views\User\Create.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
+    <Content Include="Views\User\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

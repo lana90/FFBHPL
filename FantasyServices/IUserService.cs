@@ -11,19 +11,19 @@ namespace FantasyServices
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IAdminService" in both code and config file together.
     [ServiceContract]
-    public interface IAdminService
+    public interface IUserService
     {
         [OperationContract]
         bool IsValid(string user, string password);
         [OperationContract]
-        bool CreateAdmin(string obj);
+        bool CreateUser(string obj);
         [OperationContract]
-        bool UpdateAdmin(string obj, string email);
+        bool UpdateUser(string obj, string email);
         [OperationContract]
-        bool DeleteAdmin(string email);
+        bool DeleteUser(string email);
         [OperationContract]
-        string ReadAdmin(string email);
+        string ReadUser(string email);
         [OperationContract]
-        List<string> ReadAllAdmins();
+        List<string> ReadAllUsers();
     }
 }

@@ -25,7 +25,6 @@ namespace FantasyServices
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<admin> admin { get; set; }
         public DbSet<events> events { get; set; }
         public DbSet<footballplayer> footballplayer { get; set; }
         public DbSet<footballteam> footballteam { get; set; }
@@ -35,12 +34,12 @@ namespace FantasyServices
         public DbSet<match> match { get; set; }
         public DbSet<matchevents> matchevents { get; set; }
         public DbSet<playernews> playernews { get; set; }
-        public DbSet<playersteam> playersteam { get; set; }
         public DbSet<position> position { get; set; }
         public DbSet<season> season { get; set; }
-        public DbSet<selectedsquad> selectedsquad { get; set; }
         public DbSet<selectedsquadchecked> selectedsquadchecked { get; set; }
-        public DbSet<transfer> transfer { get; set; }
+        public DbSet<squad> squad { get; set; }
+        public DbSet<squadplayer> squadplayer { get; set; }
+        public DbSet<squadstructure> squadstructure { get; set; }
         public DbSet<user> user { get; set; }
         public DbSet<usergroup> usergroup { get; set; }
     }
