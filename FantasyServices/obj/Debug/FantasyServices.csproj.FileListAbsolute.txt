@@ -1,0 +1,10 @@
+C:\Users\Lana\Desktop\NWT - projekat\FFBHPL\FantasyServices\bin\Debug\FantasyServices.dll.config
+C:\Users\Lana\Desktop\NWT - projekat\FFBHPL\FantasyServices\bin\Debug\FantasyServices.dll
+C:\Users\Lana\Desktop\NWT - projekat\FFBHPL\FantasyServices\bin\Debug\FantasyServices.pdb
+C:\Users\Lana\Desktop\NWT - projekat\FFBHPL\FantasyServices\bin\Debug\EntityFramework.dll
+C:\Users\Lana\Desktop\NWT - projekat\FFBHPL\FantasyServices\bin\Debug\EntityFramework.xml
+C:\Users\Lana\Desktop\NWT - projekat\FFBHPL\FantasyServices\obj\Debug\FantasyServices.csprojResolveAssemblyReference.cache
+C:\Users\Lana\Desktop\NWT - projekat\FFBHPL\FantasyServices\obj\Debug\FantasyServices.dll
+C:\Users\Lana\Desktop\NWT - projekat\FFBHPL\FantasyServices\obj\Debug\FantasyServices.pdb
+C:\Users\Lana\Desktop\NWT - projekat\FFBHPL\FantasyServices\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Lana\Desktop\NWT - projekat\FFBHPL\FantasyServices\bin\Debug\Newtonsoft.Json.xml

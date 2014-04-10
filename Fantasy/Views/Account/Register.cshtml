@@ -1,0 +1,51 @@
+﻿@model Fantasy.Models.admin
+@{
+    ViewBag.Title = "Register";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>Create a new account.</h2>
+</hgroup>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>Registration Form</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.email)
+                @Html.TextBoxFor(m => m.email)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.password)
+                @Html.PasswordFor(m => m.password)
+            </li>
+            <li>
+                @Html.LabelFor(m=>m.firstName)
+                @Html.TextBoxFor(m => m.firstName)
+            </li>
+            <li>
+                @Html.LabelFor(m=>m.lastName)
+                @Html.TextBoxFor(m => m.lastName)
+           </li>
+          
+             <li>
+                @Html.LabelFor(m=>m.gender)
+                @Html.TextBoxFor(m => m.gender)
+           </li>
+               <li>
+                @Html.LabelFor(m=>m.location)
+                @Html.TextBoxFor(m => m.location)
+           </li>
+            
+        </ol>
+        <input type="submit" value="Register" />
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
