@@ -8,3 +8,13 @@ C:\Users\Lana\Desktop\NWT - projekat\FFBHPL\FantasyServices\obj\Debug\FantasySer
 C:\Users\Lana\Desktop\NWT - projekat\FFBHPL\FantasyServices\obj\Debug\FantasyServices.pdb
 C:\Users\Lana\Desktop\NWT - projekat\FFBHPL\FantasyServices\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Lana\Desktop\NWT - projekat\FFBHPL\FantasyServices\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Lamija\Desktop\NWTPosljednji\FantasyServices\bin\Debug\FantasyServices.dll.config
+C:\Users\Lamija\Desktop\NWTPosljednji\FantasyServices\bin\Debug\FantasyServices.dll
+C:\Users\Lamija\Desktop\NWTPosljednji\FantasyServices\bin\Debug\FantasyServices.pdb
+C:\Users\Lamija\Desktop\NWTPosljednji\FantasyServices\bin\Debug\EntityFramework.dll
+C:\Users\Lamija\Desktop\NWTPosljednji\FantasyServices\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Lamija\Desktop\NWTPosljednji\FantasyServices\bin\Debug\EntityFramework.xml
+C:\Users\Lamija\Desktop\NWTPosljednji\FantasyServices\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Lamija\Desktop\NWTPosljednji\FantasyServices\obj\Debug\FantasyServices.csprojResolveAssemblyReference.cache
+C:\Users\Lamija\Desktop\NWTPosljednji\FantasyServices\obj\Debug\FantasyServices.dll
+C:\Users\Lamija\Desktop\NWTPosljednji\FantasyServices\obj\Debug\FantasyServices.pdb
