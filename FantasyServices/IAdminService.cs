@@ -17,5 +17,13 @@ namespace FantasyServices
         bool IsValid(string user, string password);
         [OperationContract]
         bool CreateAdmin(string obj);
+        [OperationContract]
+        bool UpdateAdmin(string obj, string email);
+        [OperationContract]
+        bool DeleteAdmin(string email);
+        [OperationContract]
+        string ReadAdmin(string email);
+        [OperationContract]
+        List<string> ReadAllAdmins();
     }
 }

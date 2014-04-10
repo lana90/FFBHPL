@@ -96,19 +96,16 @@ namespace Fantasy.Controllers
            
             if (ModelState.IsValid)
             {
-              
-                try
+                              try
                 {
-
-                    string jsonString;
+                 string jsonString;
 
           
                   DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(admin));
                   MemoryStream ms = new MemoryStream();
-                   ser.WriteObject(ms, model);
-                   jsonString = Encoding.UTF8.GetString(ms.ToArray());
-                
-                   ms.Close();
+                  ser.WriteObject(ms, model);
+                  jsonString = Encoding.UTF8.GetString(ms.ToArray());
+                  ms.Close();
 
                    MvcCall.AdminServiceClient data = new MvcCall.AdminServiceClient();
                    if (data.CreateAdmin(jsonString))
