@@ -43,6 +43,12 @@
   <wsdl:message name="IUserService_ReadAllUsers_OutputMessage">
     <wsdl:part name="parameters" element="tns:ReadAllUsersResponse" />
   </wsdl:message>
+  <wsdl:message name="IUserService_InsertImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertImage" />
+  </wsdl:message>
+  <wsdl:message name="IUserService_InsertImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertImageResponse" />
+  </wsdl:message>
   <wsdl:portType name="IUserService">
     <wsdl:operation name="IsValid">
       <wsdl:input wsaw:Action="http://tempuri.org/IUserService/IsValid" message="tns:IUserService_IsValid_InputMessage" />
@@ -67,6 +73,10 @@
     <wsdl:operation name="ReadAllUsers">
       <wsdl:input wsaw:Action="http://tempuri.org/IUserService/ReadAllUsers" message="tns:IUserService_ReadAllUsers_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IUserService/ReadAllUsersResponse" message="tns:IUserService_ReadAllUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserService/InsertImage" message="tns:IUserService_InsertImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserService/InsertImageResponse" message="tns:IUserService_InsertImage_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IUserService" type="tns:IUserService">
@@ -118,6 +128,15 @@
     </wsdl:operation>
     <wsdl:operation name="ReadAllUsers">
       <soap:operation soapAction="http://tempuri.org/IUserService/ReadAllUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertImage">
+      <soap:operation soapAction="http://tempuri.org/IUserService/InsertImage" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

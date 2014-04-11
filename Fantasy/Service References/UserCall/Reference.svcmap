@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d1aaaa72-0556-4fba-a6ff-9f12ecc9d55d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d020755e-9f1d-4236-a6e2-340c587430c7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,10 @@
     <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/FantasyServices/UserService/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="9aaee5be-fbd3-4c76-a08d-42dc1f2e6c0f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/FantasyServices/UserService/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="38d418a6-63c6-4b87-91c5-e838cf97a385" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/FantasyServices/UserService/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="8ee0b284-250a-43ad-b137-52384b4a41a8" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/FantasyServices/UserService/mex" />
-    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="36743e09-d75f-46f6-994b-f6b6c83d0197" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/FantasyServices/UserService/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="0e59cc33-2c1b-47b7-b7ac-47b374524c7f" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/FantasyServices/UserService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="d9762926-3644-481d-b74b-554eaf745e0a" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/FantasyServices/UserService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="0a72302b-ff25-40ab-ad17-e066f1595816" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/FantasyServices/UserService/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="b87a3304-f2ff-497f-91a4-560bbfac7d13" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/FantasyServices/UserService/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

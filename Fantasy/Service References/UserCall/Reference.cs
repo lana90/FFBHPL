@@ -50,6 +50,12 @@ namespace Fantasy.UserCall {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/ReadAllUsers", ReplyAction="http://tempuri.org/IUserService/ReadAllUsersResponse")]
         System.Threading.Tasks.Task<string[]> ReadAllUsersAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/InsertImage", ReplyAction="http://tempuri.org/IUserService/InsertImageResponse")]
+        bool InsertImage(string path, string mail);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/InsertImage", ReplyAction="http://tempuri.org/IUserService/InsertImageResponse")]
+        System.Threading.Tasks.Task<bool> InsertImageAsync(string path, string mail);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -125,6 +131,14 @@ namespace Fantasy.UserCall {
         
         public System.Threading.Tasks.Task<string[]> ReadAllUsersAsync() {
             return base.Channel.ReadAllUsersAsync();
+        }
+        
+        public bool InsertImage(string path, string mail) {
+            return base.Channel.InsertImage(path, mail);
+        }
+        
+        public System.Threading.Tasks.Task<bool> InsertImageAsync(string path, string mail) {
+            return base.Channel.InsertImageAsync(path, mail);
         }
     }
 }

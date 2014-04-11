@@ -28,3 +28,13 @@ C:\Users\Lana\Desktop\NWT - projekat\Lana\FantasyServices\bin\Debug\Newtonsoft.J
 C:\Users\Lana\Desktop\NWT - projekat\Lana\FantasyServices\obj\Debug\FantasyServices.csprojResolveAssemblyReference.cache
 C:\Users\Lana\Desktop\NWT - projekat\Lana\FantasyServices\obj\Debug\FantasyServices.dll
 C:\Users\Lana\Desktop\NWT - projekat\Lana\FantasyServices\obj\Debug\FantasyServices.pdb
+C:\Users\Lamija\Desktop\FFBHPL_NWT\FantasyServices\obj\Debug\FantasyServices.csprojResolveAssemblyReference.cache
+C:\Users\Lamija\Desktop\FFBHPL_NWT\FantasyServices\obj\Debug\FantasyServices.dll
+C:\Users\Lamija\Desktop\FFBHPL_NWT\FantasyServices\obj\Debug\FantasyServices.pdb
+C:\Users\Lamija\Desktop\FFBHPL_NWT\FantasyServices\bin\Debug\FantasyServices.dll.config
+C:\Users\Lamija\Desktop\FFBHPL_NWT\FantasyServices\bin\Debug\FantasyServices.dll
+C:\Users\Lamija\Desktop\FFBHPL_NWT\FantasyServices\bin\Debug\FantasyServices.pdb
+C:\Users\Lamija\Desktop\FFBHPL_NWT\FantasyServices\bin\Debug\EntityFramework.dll
+C:\Users\Lamija\Desktop\FFBHPL_NWT\FantasyServices\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Lamija\Desktop\FFBHPL_NWT\FantasyServices\bin\Debug\EntityFramework.xml
+C:\Users\Lamija\Desktop\FFBHPL_NWT\FantasyServices\bin\Debug\Newtonsoft.Json.xml

@@ -216,6 +216,35 @@ namespace FantasyServices
 
             return jsonString;
         }
+        public bool InsertImage(string path, string mail)
+        {
+            string provjera = "";
+            try
+            {
+                fantasyEntities db = new fantasyEntities();
+                var context = db.user.Where(a => a.email == mail).FirstOrDefault();
+                if (context == null)
+                    provjera = "nema";
+                else
+                {
+                    context.image = path;
+                    db.SaveChanges();
+                }
+            }
+            catch (DbEntityValidationException e)
+            {
+                foreach (var eve in e.EntityValidationErrors)
+                {
+                    provjera = eve.Entry.Entity.GetType().Name + " " + eve.Entry.State;
+                    foreach (var ve in eve.ValidationErrors)
+                    {
+                        provjera = ve.PropertyName + " " + ve.ErrorMessage;
+                    }
+                }
+            }
+            if (provjera.Equals("")) return true;
+            else return false;
+        }
     }
 }
     

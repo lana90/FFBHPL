@@ -4,15 +4,23 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.IO;
+using Fantasy.Models;
 
 namespace Fantasy.Controllers
 {
     public class UploadImageController : Controller
     {
 
-        //[HttpPost]
         public ActionResult Index()
         {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Index(LoginModel model)
+        {
+
+            UserCall.UserServiceClient data = new UserCall.UserServiceClient();
             foreach (string file in Request.Files)
             {
                 HttpPostedFileBase hpf = Request.Files[file] as HttpPostedFileBase;
@@ -21,9 +29,9 @@ namespace Fantasy.Controllers
                 var fileName = Path.GetFileName(hpf.FileName);
                 var path = Path.Combine(Server.MapPath("~/Content/images"), fileName);
                 hpf.SaveAs(path);
+                data.InsertImage(path, model.UserName);
             }
-            return View();
+            return RedirectToAction("Index", "UploadImage", new { mail = model.UserName });
         }
     }
-
 }

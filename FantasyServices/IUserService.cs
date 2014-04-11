@@ -25,5 +25,7 @@ namespace FantasyServices
         string ReadUser(string email);
         [OperationContract]
         List<string> ReadAllUsers();
+        [OperationContract]
+        bool InsertImage(string path, string mail);
     }
 }
