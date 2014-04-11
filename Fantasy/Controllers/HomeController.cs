@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Fantasy.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace Fantasy.Controllers
 {
@@ -10,23 +12,29 @@ namespace Fantasy.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
-
             return View();
         }
 
-        public ActionResult About()
+        [HttpPost]
+        public ActionResult Index(LoginModel model)
         {
-            ViewBag.Message = "Your app description page.";
+            UserCall.UserServiceClient data = new UserCall.UserServiceClient();
 
-            return View();
-        }
+            if (ModelState.IsValid && data.IsValid(model.UserName, model.Password))
+            {
+                Session["LoggedUserID"] = model.UserName;
+                FormsAuthentication.SetAuthCookie(model.UserName, true);
 
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+                return RedirectToAction("AfterLogin","Account");
+            }
+            else
+            {
+                ModelState.AddModelError("", "The user name or password provided is incorrect.");
+                return View(model);
+            }
+         
+            
+           
         }
     }
 }

@@ -38,9 +38,10 @@ namespace Fantasy.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Login(LoginModel model, string returnUrl)
         {
-            
-                MvcCall.AdminServiceClient data = new MvcCall.AdminServiceClient();
-                if (ModelState.IsValid&&data.IsValid(model.UserName, model.Password) != null)
+
+            UserCall.UserServiceClient data = new UserCall.UserServiceClient();
+               
+                if (ModelState.IsValid&&data.IsValid(model.UserName, model.Password))
                 {
                     Session["LoggedUserID"] = model.UserName;
                     FormsAuthentication.SetAuthCookie(model.UserName, true);
@@ -103,12 +104,13 @@ namespace Fantasy.Controllers
           
                   DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(user));
                   MemoryStream ms = new MemoryStream();
+                  
                   ser.WriteObject(ms, model);
                   jsonString = Encoding.UTF8.GetString(ms.ToArray());
                   ms.Close();
 
-                   MvcCall.AdminServiceClient data = new MvcCall.AdminServiceClient();
-                   if (data.CreateAdmin(jsonString))
+                  UserCall.UserServiceClient data = new UserCall.UserServiceClient();
+                   if (data.CreateUser(jsonString))
                    {
                        Session["LoggedUserID"] = model.email;
                        FormsAuthentication.SetAuthCookie(model.email, true);
