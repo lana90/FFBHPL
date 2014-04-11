@@ -104,7 +104,10 @@ namespace Fantasy.Controllers
           
                   DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(user));
                   MemoryStream ms = new MemoryStream();
-                  
+                  model.image = "";
+                  model.gender = false;
+                  model.dateOfBirth = System.DateTime.Today;
+                  model.UserGroup_idUserGroup = 1;
                   ser.WriteObject(ms, model);
                   jsonString = Encoding.UTF8.GetString(ms.ToArray());
                   ms.Close();
